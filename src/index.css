@@ -16,6 +16,7 @@ code {
 .App {
   display: grid;
   grid-template-columns: 90px 1fr;
+  background-color: #8080801a;
 }
 
 .sidebar {
@@ -25,8 +26,13 @@ code {
 
 
 header {
-  font-size: 2rem;
   text-align: left;
+  margin-bottom: 2rem;
+}
+
+header h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .content-container {
@@ -34,7 +40,6 @@ header {
 }
 
 .sub-head {
-  text-align: left;
   display: inline-block;
   color: gray;
 }
@@ -42,4 +47,14 @@ header {
 .ui-card {
   display: inline-block;
   padding: 1.5rem;
+  width: 365px;
+  height: 140px;
+  border-radius: 5px;
+  box-shadow: 0 3px 2px #8080805c;
+  margin-right: 2rem;
+}
+
+.ui-card > img {
+  width: 65px;
+  height: 65px;
 }
