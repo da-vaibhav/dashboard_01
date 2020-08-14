@@ -22,9 +22,11 @@ function Dashboard() {
         <h2>Dashboard</h2>
         <small className="sub-head">Mobile UX/UI design course</small>
       </header>
+
       {Loading && <span>Loading dashboard stats...</span> }
+
       {Stats.length > 0 && <React.Fragment>
-        <div>
+        <div className="stats-container">
           {Stats.map(({id, title , type, line1 = null, line2 = null})=> {
             return <Card
                       key={id}

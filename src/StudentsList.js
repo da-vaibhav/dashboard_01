@@ -11,13 +11,16 @@ function StudentsList() {
   }, []);
 
   return (
-    <div>
+    <div className="list-container">
       {ListData.length > 0 && <div>
-        <span>Students by average mark</span>
+        <span className="list-container-title">Students by average mark</span> <hr/>
         {ListData.map(({id, name, marks}) => {
-          return (<div key={id}>
-              {name}
-              {marks}
+          return (<div key={id} className="list-item">
+              <img className="list-item-img" src="user.svg" alt="person image"/>
+              <div className="list-item-stats">
+                <span>{name}</span>
+                <span className="list-item-highlight">{marks}</span>
+              </div>
             </div>);
         })}
       </div>}
