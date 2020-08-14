@@ -12,10 +12,12 @@ function getIconFromMapping(type) {
 function Card({ title, type, primary_stat, secondary_stat}) {
   return (
     <div className="ui-card">
-      <img src={getIconFromMapping(type)} alt={title}/>
-      <p>{title}</p>
-      <span>{primary_stat}</span>
-      {secondary_stat && <span>{secondary_stat}</span>}
+      <div className="ui-card-img"><img src={getIconFromMapping(type)} alt={title}/></div>
+      <div>
+        <span className="primary-stats">{primary_stat}</span>
+        {secondary_stat && <span className="secondary-stats">{secondary_stat}</span>}
+        <p className="stats-description">{title}</p>
+      </div>
     </div>
   )
 }

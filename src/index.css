@@ -54,7 +54,7 @@ header h2 {
 }
 
 .ui-card {
-  display: inline-block;
+  display: flex;
   padding: var(--card-padding);
   width: var(--card-width);
   height: 140px;
@@ -62,17 +62,28 @@ header h2 {
   box-shadow: var(--card-box-shadow);
   margin-right: 2rem;
   background-color: var(--card-bg-color);
+  flex-direction: row;
+  align-items: center;
 }
 
-.ui-card > img {
+.ui-card-img {
   width: 65px;
   height: 65px;
   border-radius: 50%;
   background-color: lightgreen;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.ui-card-img > img {
+  width: 50px;
+  height: 60px;
 }
 
 .stats-container {
   margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .list-container {
@@ -115,5 +126,23 @@ hr {
 
 .list-container-title {
   font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.primary-stats {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.secondary-stats {
+  font-size: 1rem;
+  color: dimgrey;
+  display: inline-block;
+  padding: 0 3px;
+}
+
+.stats-description{
+  color: dimgrey;
+  margin: 5px 0;
   font-size: 0.9rem;
 }
