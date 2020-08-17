@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import getDataFrom from './api';
 
 function StudentsList() {
   const [ListData, setListData] = useState([]);
   const [DescendingOrder, setOrder] = useState(true);
 
   useEffect(() => {
-    window.fetch('https://my-json-server.typicode.com/shripad-agashe/fake-api/students')
-      .then(res => res.json())
+    getDataFrom('students')
       .then(data => {
         setListData(data.sort((a, z) => z.marks - a.marks));
       });

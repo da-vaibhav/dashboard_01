@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import StudentsList from './StudentsList';
+import getDataFrom from './api';
 
 function Dashboard() {
   const [Stats, setStats] = useState([]);
@@ -8,8 +9,7 @@ function Dashboard() {
 
   useEffect(() => {
     setLoading(true);
-    window.fetch('https://my-json-server.typicode.com/shripad-agashe/fake-api/dashboard')
-      .then(res => res.json())
+    getDataFrom('dashboard')
       .then(data => {
         setStats(data);
       })
@@ -24,7 +24,7 @@ function Dashboard() {
         <div>
           <img src="user.svg" alt="person image"/>
         </div>
-      </div>  
+      </div>
       <header>
         <h2>Dashboard</h2>
         <small className="sub-head">Mobile UX/UI design course</small>
