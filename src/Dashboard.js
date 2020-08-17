@@ -18,6 +18,13 @@ function Dashboard() {
 
   return (
     <div className="content-container">
+      <div className="top-nav">
+        <span>Cody Simmons</span>
+        <span>Lecturer</span>
+        <div>
+          <img src="user.svg" alt="person image"/>
+        </div>
+      </div>  
       <header>
         <h2>Dashboard</h2>
         <small className="sub-head">Mobile UX/UI design course</small>

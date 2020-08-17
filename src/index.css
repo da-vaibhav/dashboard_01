@@ -146,3 +146,19 @@ hr {
   margin: 5px 0;
   font-size: 0.9rem;
 }
+
+.list-item-stats-primary {
+  color: dimgrey;
+}
+
+.student-list-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-toggle-order {
+  border: none;
+  background-color: transparent;
+  color: dimgrey;
+  cursor: pointer;
+}
