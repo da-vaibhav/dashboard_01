@@ -162,3 +162,7 @@ hr {
   color: dimgrey;
   cursor: pointer;
 }
+
+.top-nav {
+  display: none;
+}
