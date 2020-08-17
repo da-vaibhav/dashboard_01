@@ -25,9 +25,9 @@ afterEach(cleanup);
 
 global.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => (mockData)}));
 
-describe('implements Dashboard render logic correctly', () => {
-  it('sdsdss', async () => {
-    const {debug, findByText} = render(<StudentsList />);
+describe('implements StudentsList render logic correctly', () => {
+  it('fetches data and renders', async () => {
+    const { findByText} = render(<StudentsList />);
 
     const text1 = await findByText('haruki');
     const text2 = await findByText('jojo');
